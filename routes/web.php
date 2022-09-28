@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', [AuthController::class, 'loginpage'])->name('login');
+Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::group(['middleware' => ['auth','ceklevel:admin,santri']], function (){
+    Route::get('/dashboard', function () {
+        return view('layouts.main');
+    });
 });
+
+
