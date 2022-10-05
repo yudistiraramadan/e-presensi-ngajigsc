@@ -13,7 +13,7 @@ class PresensiController extends Controller
      */
     public function index()
     {
-        //
+        return view('presensi.masuk');
     }
 
     /**
