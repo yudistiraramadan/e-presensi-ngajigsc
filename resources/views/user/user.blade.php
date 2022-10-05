@@ -30,13 +30,13 @@
                         <td>{{ $user->level }}</td>
                         <td>{{ $user->phone }}</td>
                         <td>
-                            <a href="#" class="btn btn-warning btn-sm">Edit
+                            <a href="/show-user/{{ $user->id }}" class="btn btn-warning btn-sm">Edit
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
 
-                                <a href="/delete/{{ $user->id }}" class="btn btn-danger btn-sm">Hapus
-                                <i class="fa-solid fa-trash"></i>
-                                </a>
+                            <a href="/delete/{{ $user->id }}" class="btn btn-danger btn-sm">Hapus
+                            <i class="fa-solid fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                     @endforeach

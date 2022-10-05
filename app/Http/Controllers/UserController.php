@@ -47,4 +47,16 @@ class UserController extends Controller
         $data->delete();
         return redirect()->route('user');
     }
+    // Menampilkan Data Edit
+    public function showuser($id)
+    {
+        $data = User::find($id);
+        return view('user.show-user', compact('data'));
+    }
+    public function edituser(Request $request, $id)
+    {
+        $data = User::find($id);
+        $data->update($request->all());
+        return redirect()->route('user');
+    }
 }

@@ -28,7 +28,9 @@ Route::group(['middleware' => ['auth','ceklevel:admin,santri']], function (){
     // Daftar User Admin & Santri
     Route::get('/user', [UserController::class, 'index'])->name('user');
     Route::get('/add-user', [UserController::class, 'adduser'])->name('adduser');
-    Route::post('/insertuser', [UserController::class, 'insertuser'])->name('insertuser');
+    Route::post('/insert-user', [UserController::class, 'insertuser'])->name('insertuser');
+    Route::get('/show-user/{id}', [UserController::class, 'showuser'])->name('showuser');
+    Route::post('/edit-user/{id}', [UserController::class, 'edituser'])->name('edituser');
     Route::get('/delete/{id}', [UserController::class, 'delete'])->name('delete');
 });
 
