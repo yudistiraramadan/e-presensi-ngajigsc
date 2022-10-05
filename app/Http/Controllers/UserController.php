@@ -22,7 +22,7 @@ class UserController extends Controller
     }
 
     // View Tambah User
-    public function tambahuser()
+    public function adduser()
     {
         return view('user.tambah-user');
     }
@@ -38,8 +38,13 @@ class UserController extends Controller
         'phone' => $request->phone,
        ]);
        $user->save();
-
-
        return redirect('/user');
+    }
+    // Delete Data
+    public function delete($id)
+    {
+        $data = User::find($id);
+        $data->delete();
+        return redirect()->route('user');
     }
 }
