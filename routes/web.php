@@ -22,7 +22,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth','ceklevel:admin,santri']], function (){
     Route::get('/dashboard', function () {
-        return view('layouts.main');
+        return view('dashboard');
     });
 
     // Daftar User Admin & Santri
