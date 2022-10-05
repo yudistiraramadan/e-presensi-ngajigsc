@@ -19,7 +19,7 @@
                             <div class="mb-3">
                               <label for="password" class="form-label">Password</label>
                               <input name="password" type="password" class="form-control" id="password" aria-describedby="emailHelp" required>
-                              <span style="position: absolute; right:30px; transform:translate(0,-50%); top:52%; cursor:pointer;">
+                              <span style="position: absolute; right:30px; transform:translate(0,-50%); top:44%; cursor:pointer;">
                                 <i class="fa-solid fa-eye" id="eye" onclick="toggle()"></i>
                               </span>
                             </div>
@@ -35,7 +35,6 @@
                                     <option value="santri">santri</option>
                                 </select>
                             </div>
-                                                      
                             <a href="/user"><button type="button" class="btn btn-warning">Kembali</button></a>
                             <button type="submit" class="btn btn-success">Simpan</button>
                           </form>

@@ -12,13 +12,13 @@ class UserController extends Controller
     public function index()
     {
         // Pemanggilan Data Descanding
-        // $data= DB::table('users')
-        // ->orderBy('id', 'desc')
-        // ->get();
-        // return view('user.user', compact('data'));
-
-        $data = User::all();
+        $data= DB::table('users')
+        ->orderBy('id', 'desc')
+        ->get();
         return view('user.user', compact('data'));
+
+        // $data = User::all();
+        // return view('user.user', compact('data'));
     }
 
     // View Tambah User
@@ -29,23 +29,26 @@ class UserController extends Controller
 
     public function insertuser(Request $request)
     {  
+
+    // $data = User::create($request->all()); Langsung
     //    dd($request->all());
-       $user =  User::create([
+    // Shortir
+       User::create([
         'name' => $request->name,
         'email' => $request->email,
         'password' => Hash::make($request->password),
         'level' => $request->level,
         'phone' => $request->phone,
        ]);
-       $user->save();
-       return redirect('/user');
+       return redirect('user')->with('toast_success', 'Data User Berhasi Ditambahkan');
     }
     // Delete Data
     public function delete($id)
     {
         $data = User::find($id);
         $data->delete();
-        return redirect()->route('user');
+        return redirect()->route('user')->with('toast_success', 'Data User Berhasi Dihapus');
+        
     }
     // Menampilkan Data Edit
     public function showuser($id)
@@ -57,6 +60,6 @@ class UserController extends Controller
     {
         $data = User::find($id);
         $data->update($request->all());
-        return redirect()->route('user');
+        return redirect()->route('user')->with('toast_success', 'Data User Berhasi Diedit');
     }
 }
