@@ -40,7 +40,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">E-Presensi Ngaji GSC</h1>
                                     </div>
-                                    <form  action="{{ route('postlogin') }}" method="post">
+                                    <form  action="{{ route('postlogin') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <input name="email" type="email" class="form-control form-control-user"

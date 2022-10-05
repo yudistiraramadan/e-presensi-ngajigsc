@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,11 @@ Route::group(['middleware' => ['auth','ceklevel:admin,santri']], function (){
     Route::get('/dashboard', function () {
         return view('layouts.main');
     });
+
+    // Daftar User Admin & Santri
+    Route::get('/user', [UserController::class, 'index'])->name('user');
+    Route::get('/tambah-user', [UserController::class, 'tambahuser'])->name('tambahuser');
+    Route::post('/insertuser', [UserController::class, 'insertuser'])->name('insertuser');
 });
 
 

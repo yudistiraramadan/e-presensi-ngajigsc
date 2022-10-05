@@ -17,4 +17,7 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    {{-- Fontawesome 6.2.0 --}}
+    <script src="https://kit.fontawesome.com/7d0c6917e1.js" crossorigin="anonymous"></script>
+
 </head>
