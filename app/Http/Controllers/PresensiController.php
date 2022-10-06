@@ -90,6 +90,12 @@ class PresensiController extends Controller
         
     }
 
+    public function tampildatakeseluruhan($tglawal, $tglakhir)
+    {
+        $presensi = Presensi::with('user')->whereBetween('tanggal', [$tglawal, $tglakhir])->orderBy('tanggal', 'asc')->get();
+        return view('presensi.rekap-santri',compact('presensi'));
+    }
+
     /**
      * Display the specified resource.
      *
