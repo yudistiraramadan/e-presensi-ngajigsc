@@ -57,7 +57,7 @@
                             <div class="card-header py-3">
                             </div>
                             <div class="card-body">
-                                <form action="#" method="post">
+                                <form action="{{ route('simpan-masuk') }}" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <center>
@@ -69,6 +69,11 @@
                                             </label>
                                         </center>
                                     </div>
+                                    <center>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Presensi Sekarang</button>
+                                        </div>
+                                    </center>
                                 </form>
                             </div>
                         </div>

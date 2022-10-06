@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('presensis', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->date('tanggal');
+            $table->time('jammasuk')->nullable();
+            $table->time('jamkeluar')->nullable();
+            $table->time('jamngaji')->nullable();
             $table->timestamps();
         });
     }
