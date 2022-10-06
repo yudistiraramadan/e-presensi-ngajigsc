@@ -20,13 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'loginpage'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
-Route::group(['middleware' => ['auth','ceklevel:admin,santri']], function (){
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    });
-
-    // Daftar User Admin & Santri
+Route::group(['middleware' => ['auth','ceklevel:admin']], function (){
     Route::get('/user', [UserController::class, 'index'])->name('user');
     Route::get('/add-user', [UserController::class, 'adduser'])->name('adduser');
     Route::post('/insert-user', [UserController::class, 'insertuser'])->name('insertuser');

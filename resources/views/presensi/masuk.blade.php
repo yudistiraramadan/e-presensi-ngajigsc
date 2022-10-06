@@ -86,5 +86,6 @@
             <i class="fas fa-angle-up"></i>
         </a>
         @include('layouts.script')
+        @include('sweetalert::alert')
     </body>
 </html>

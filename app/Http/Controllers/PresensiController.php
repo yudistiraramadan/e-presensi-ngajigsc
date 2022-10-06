@@ -52,7 +52,7 @@ class PresensiController extends Controller
             ['tanggal', '=',$tanggal],
         ])->first();
         if ($presensi){
-            dd('sudah absen masuk bre');
+            return redirect('presensi-masuk')->with('info', 'Anda sudah absensi');
         }else{
             Presensi::create([
                 'user_id' => auth()->user()->id,
@@ -60,7 +60,7 @@ class PresensiController extends Controller
                 'jammasuk' => $localtime,
             ]);
         }
-        return redirect('presensi-masuk');
+        return redirect('presensi-masuk')->with('success', 'Anda berhasil absensi');
     }
 
     public function storekeluar(Request $request)
@@ -83,9 +83,9 @@ class PresensiController extends Controller
         if ($presensi->jamkeluar == "")
         {
             $presensi->update($dt);
-            return redirect('presensi-keluar');
+            return redirect('presensi-keluar')->with('success', 'Anda berhasil absensi keluar');
         }else{
-            dd("sudah absen keluar bree");
+            return redirect('presensi-keluar')->with('info', 'Anda sudah absensi keluar');
         }
         
     }
