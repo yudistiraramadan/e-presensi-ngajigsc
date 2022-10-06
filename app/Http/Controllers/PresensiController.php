@@ -14,9 +14,14 @@ class PresensiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function presensimasuk()
     {
         return view('presensi.masuk');
+    }
+
+    public function presensikeluar()
+    {
+        return view('presensi.keluar');
     }
 
     /**
@@ -47,7 +52,7 @@ class PresensiController extends Controller
             ['tanggal', '=',$tanggal],
         ])->first();
         if ($presensi){
-            dd('sudah absen bre');
+            dd('sudah absen masuk bre');
         }else{
             Presensi::create([
                 'user_id' => auth()->user()->id,
@@ -56,6 +61,33 @@ class PresensiController extends Controller
             ]);
         }
         return redirect('presensi-masuk');
+    }
+
+    public function storekeluar(Request $request)
+    {
+        $timezone = 'Asia/Jakarta';
+        $date = new DateTime('now', new DateTimeZone($timezone));
+        $tanggal = $date->format('Y-m-d');
+        $localtime = $date->format('H:i:s');
+
+        $presensi = Presensi::where([
+            ['user_id', '=',auth()->user()->id],
+            ['tanggal', '=',$tanggal],
+        ])->first();
+
+        $dt=[
+            'jamkeluar' => $localtime,
+            'jamngaji' => date('H:i:s', strtotime($localtime) - strtotime($presensi->jammasuk))
+        ];
+
+        if ($presensi->jamkeluar == "")
+        {
+            $presensi->update($dt);
+            return redirect('presensi-keluar');
+        }else{
+            dd("sudah absen keluar bree");
+        }
+        
     }
 
     /**

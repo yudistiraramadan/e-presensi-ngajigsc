@@ -73,7 +73,7 @@
             <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="/presensi-masuk">Presensi Masuk</a>
-                    <a class="collapse-item" href="#">Presensi Keluar</a>
+                    <a class="collapse-item" href="/presensi-keluar">Presensi Keluar</a>
                 </div>
             </div>
         </li>
@@ -90,7 +90,6 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="buttons.html">Presensi Tiap Santri</a>
-                <a class="collapse-item" href="cards.html">Presensi Keseluruhan</a>
             </div>
         </div>
     </li>
