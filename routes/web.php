@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:santri']], function(){
     Route::get('/presensi-keluar', [PresensiController::class, 'presensikeluar'])->name('presensi-keluar');
     Route::post('/simpan-masuk', [PresensiController::class, 'store'])->name('simpan-masuk');
     Route::post('/simpan-keluar', [PresensiController::class, 'storekeluar'])->name('simpan-keluar');
+    Route::get('/filter-data/', [PresensiController::class, 'halamanrekap'])->name('filter-data');
     Route::get('/filter-data/{tglawal}/{tglakhir}', [PresensiController::class, 'tampildatakeseluruhan'])->name('filter-data-keseluruhan');
 });
 

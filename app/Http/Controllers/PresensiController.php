@@ -89,6 +89,12 @@ class PresensiController extends Controller
         }
         
     }
+    
+    public function halamanrekap()
+    {
+        return view('presensi.halaman-rekap-santri');
+
+    }
 
     public function tampildatakeseluruhan($tglawal, $tglakhir)
     {
