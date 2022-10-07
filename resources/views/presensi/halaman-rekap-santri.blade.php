@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="form-group">
                                         <a href="" onclick="this.href='/filter-data/' + document.getElementById('tglawal').value +
-                                        '/' + document.getElementById('tglakhir').value" class="btn btn-primary col-md-12">
+                                        '/' + document.getElementById('tglakhir').value" class="btn btn-success col-md-12">
                                         Lihat Data <i class="fa-sharp fa-solid fa-print-magnifying-glass"></i>
                                         </a>
                                     </div>

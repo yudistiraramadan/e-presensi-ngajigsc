@@ -71,7 +71,7 @@
                                     </div>
                                     <center>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary">Presensi Sekarang</button>
+                                            <button type="submit" class="btn btn-success">Presensi Sekarang</button>
                                         </div>
                                     </center>
                                 </form>

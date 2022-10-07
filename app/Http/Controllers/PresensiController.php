@@ -105,13 +105,21 @@ class PresensiController extends Controller
 
     public function allpresensi()
     {
+        // Short By Descending ver1
         // $data = DB::table('presensis')
         // ->orderBy('id', 'desc')
         // ->get();
         // return view('presensi.presensi-keseluruhan', compact('data'));
+
+        // Short By Descending ver2 
+        // $data = Presensi::all()
+        // ->sortByDesc('id');
+        // return view('presensi.presensi-keseluruhan', compact('data'));
         
-        $data = Presensi::all();
+        $data = Presensi::all()
+        ->sortByDesc('id');
         return view('presensi.presensi-keseluruhan', compact('data'));
+
     }
 }
 

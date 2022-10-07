@@ -12,7 +12,6 @@
                     <table class="table table-hover table-responsive-lg table-bordered" style="margin-top: 5px;">
                         <thead>
                             {{-- <th>Id</th> --}}
-                            <th>User_Id</th>
                             <th>Nama</th>
                             <th>Tanggal</th>
                             <th>Masuk</th>
@@ -24,7 +23,6 @@
                             <tr>
                                 {{-- <td>{{ $no++ }}</td> --}}
                                 {{-- <td>{{ $row->id }}</td> --}}
-                                <td>{{ $row->user_id }}</td>
                                 <td>{{ $row->user->name }}</td>
                                 <td>{{ $row->tanggal }}</td>
                                 <td>{{ $row->jammasuk }}</td>

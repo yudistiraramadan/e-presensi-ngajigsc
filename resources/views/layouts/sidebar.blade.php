@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
@@ -47,7 +47,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="/filter-data">Presensi Tiap Tanggal</a>
-                    <a class="collapse-item" href="#">Presensi Keseluruhan</a>
+                    <a class="collapse-item" href="/presensi-keseluruhan">Presensi Keseluruhan</a>
                 </div>
             </div>
         </li>
@@ -81,7 +81,7 @@
         <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <li class="nav-item" style="margin-top: -15px;">
+    {{-- <li class="nav-item" style="margin-top: -15px;">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
@@ -92,7 +92,7 @@
                 <a class="collapse-item" href="/filter-data">Laporan Presensi Saya</a>
             </div>
         </div>
-    </li>
+    </li> --}}
 
     
     @endif
