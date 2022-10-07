@@ -46,8 +46,8 @@
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="buttons.html">Presensi Tiap Santri</a>
-                    <a class="collapse-item" href="cards.html">Presensi Keseluruhan</a>
+                    <a class="collapse-item" href="/filter-data">Presensi Tiap Tanggal</a>
+                    <a class="collapse-item" href="#">Presensi Keseluruhan</a>
                 </div>
             </div>
         </li>
@@ -89,7 +89,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Laporan Presensi Saya</a>
+                <a class="collapse-item" href="/filter-data">Laporan Presensi Saya</a>
             </div>
         </div>
     </li>
